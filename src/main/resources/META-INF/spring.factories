@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.moon.dlock.config.RedisAutoConfig,\
+com.moon.dlock.config.ActivemqConfig
