@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
  * @packageName: com.moon.dlock.config
  * @description: 分布式锁的配置类，需要在application配置文件中配置，参照如下：
  *               dlock:
- *                 strategy: redis
  *                 expireTime: 10000
  *
  * @data: 2019-11-12 10:34
@@ -27,22 +26,9 @@ import org.springframework.stereotype.Component;
 public class DLockProperties {
 
     /**
-     * 策略
-     */
-    private String strategy;
-
-    /**
      * 过期时间
      */
     private String expireTime;
-
-    public String getStrategy() {
-        return strategy;
-    }
-
-    public void setStrategy(String strategy) {
-        this.strategy = strategy;
-    }
 
     public String getExpireTime() {
         return expireTime;

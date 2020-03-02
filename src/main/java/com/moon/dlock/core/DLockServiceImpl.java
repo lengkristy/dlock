@@ -37,18 +37,14 @@ public class DLockServiceImpl implements DLockService{
      */
     private static Logger LOGGER = LoggerFactory.getLogger(DLockServiceImpl.class);
 
-    /**配置*/
-    private DLockProperties dLockProperties;
-
     private DLockService dLockServiceRedis;
 
     private JMSProducer jmsProducer;
 
 
     @Autowired
-    public DLockServiceImpl(DLockProperties dLockProperties, DLockServiceRedisImpl dLockServiceRedis,
+    public DLockServiceImpl(DLockServiceRedisImpl dLockServiceRedis,
                             JMSProducerActiveMqImpl jmsProducerActiveMq){
-        this.dLockProperties = dLockProperties;
         this.dLockServiceRedis = dLockServiceRedis;
         this.jmsProducer = jmsProducerActiveMq;
     }
@@ -139,9 +135,6 @@ public class DLockServiceImpl implements DLockService{
      * 获取实现的具体服务
      */
     private DLockService getService(){
-        if (Constant.DLockStrategy.REDIS.equals(dLockProperties.getStrategy())){
-            return this.dLockServiceRedis;
-        }
-        return null;
+        return this.dLockServiceRedis;
     }
 }
