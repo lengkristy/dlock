@@ -7,6 +7,9 @@
  */
 package com.moon.dlock;
 
+import com.moon.dlock.annots.ServerSync;
+import com.moon.dlock.enums.ObtainLockModel;
+
 /**
  * @version: V1.0
  * @author: 代浩然

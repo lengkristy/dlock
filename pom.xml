@@ -6,14 +6,14 @@
 
     <groupId>com.moon</groupId>
     <artifactId>dlock</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>2.1.6.RELEASE</version>
 
     <description>实现分布式锁，主要是采用redis实现</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.6.RELEASE</version>
+        <version>2.1.6.RELEASE</version>
         <relativePath/>
     </parent>
 
